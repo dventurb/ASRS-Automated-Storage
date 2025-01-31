@@ -6,9 +6,10 @@ Aqui, encontrarás todos os ficheiros CAD para as peças impressas em 3D, diagra
 
 O sistema foi desenvolvido como parte do projeto final do Curso Técnico Superior Profissional de Sistemas Eletrónicos e Computadores, sob a orientação dos professores da **Escola Superior de Tecnologia e Gestão (ESTG)**.
 
-<div align="center" style="text-align: center">
-<img src="https://imgur.com/B0eKkpb.png" alt="script">
+<div align="center">
+    <img src="https://imgur.com/B0eKkpb.png" alt="script" width="300">
 </div>
+
 
 ### Funcionalidades Principais:
 1. **Movimentação Automatizada**: Controlo preciso dos eixos X, Y e Z para armazenamento e recuperação de materiais.
