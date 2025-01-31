@@ -21,10 +21,10 @@ O sistema foi desenvolvido como parte do projeto final do Curso Técnico Superio
 ## Estrutura do Repositório
 
 - **/CAD**: Ficheiros STL e STEP para as peças impressas em 3D.
-- **/Circuitos**: Diagramas elétricos e esquemas de ligação dos componentes.
-- **/Código**: Código-fonte para o Arduino e ESP32.
-- **/Testes**: Resultados dos testes realizados e análise de dados.
-- **/Documentação**: Relatórios, imagens e outros documentos relevantes.
+- **/Electronics**: Diagramas elétricos e esquemas de ligação dos componentes.
+- **/Software**: Código-fonte para o Arduino e ESP32.
+- **/Pictures**: Figuras dos testes realizados e análise.
+- **/Documentação**: Relatórios e documentos relevantes.
 
 ---
 
