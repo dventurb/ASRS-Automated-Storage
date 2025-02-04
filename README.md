@@ -96,7 +96,7 @@ O algoritmo Queue foi implementado para controlar a movimentação dos materiais
 O fluxograma abaixo ilustra o fluxo do programa no ESP32, com o algoritmo FIFO sendo utilizado para determinar a ordem de operação.
 
 <div align="center">
-<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Diagrams%20and%20Schematics/Flowchart_ESP32.png" alt="script" width="700">
+<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Diagrams%20and%20Schematics/Flowchart_ESP32.png" alt="script" width="500">
 </div>
 
 ### Interface de Controlo
