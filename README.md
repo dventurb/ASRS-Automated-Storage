@@ -50,14 +50,14 @@ O sistema foi desenvolvido como parte do projeto final do Curso Técnico Superio
 A estrutura do sistema foi construída principalmente em madeira, com suportes impressos em 3D para os motores e eixos. O eixo Y utiliza um parafuso de avanço para movimentação vertical, enquanto os eixos X e Z utilizam correias dentadas para movimentação horizontal.
 
 <div align="center">
-<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Mechanics/ASRS_MechanicalComponents.png" alt="script" width="200">
+<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Mechanics/ASRS_MechanicalComponents.png" alt="script" width="300">
 </div>
 
 ### Circuito Eletrónico
 O circuito eletrónico foi desenvolvido utilizando um Arduino Mega para controlo dos motores de passo e um ESP32 para a interface web. A comunicação entre os dispositivos é feita através do protocolo UART.
 
 <div align="center">
-<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Electronics/Circuit_Connections.png" alt="script" width="500">
+<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Electronics/Circuit_Connections.png" alt="script" width="1000">
 </div>
 
 ### Interface de Controlo
