@@ -53,6 +53,14 @@ A estrutura do sistema foi construída principalmente em madeira, com suportes i
 <img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Mechanics/ASRS_MechanicalComponents.png" alt="script" width="300">
 </div>
 
+### Funcionamento
+**1. O ESP32 recebe autenticação via RFID e habilita o controlo do sistema.**
+**2. O utilizador controla o sistema através dos Botões de Contato.**
+**3. O ESP32 processa o algoritmo de FIFO e envia, via serial, o compartimento a ser tratado para o Arduino Mega.**
+**4. O Arduino Mega interpreta os comandos e aciona os motores de passo para movimentação nos eixos X, Y e Z.**
+**5. Os sensores garantem precisão e segurança nos movimentos.**
+**6. O sistema registra a posição, o peso do material e a Tag RFID do utilizador.**
+   
 ### Circuito Eletrónico
 O circuito eletrónico foi desenvolvido utilizando um Arduino Mega para controlo dos motores de passo e um ESP32 para a interface web. A comunicação entre os dispositivos é feita através do protocolo UART.
 
