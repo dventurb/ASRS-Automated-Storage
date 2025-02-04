@@ -75,7 +75,7 @@ A estrutura do sistema foi construída principalmente em madeira, com suportes i
 ### Circuito Eletrónico
 Este é o esquema elétrico detalhado do sistema ASRS, desenvolvido no KiCad. Ele apresenta todas as conexões elétricas, incluindo componentes como ESP32, Arduino Mega, drivers de motor, sensores, fonte de alimentação e demais módulos eletrônicos utilizados no projeto.
 
-[<img src="https://imgur.com/a/4SeKzXN" alt="Esquema" width="1000">](https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Electronics/Schematic_Colours.pdf)
+[<img src="https://i.imgur.com/aVkR3sI.png" alt="Esquema" width="1000">](https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Electronics/Schematic_Colours.pdf)
 
 Este diagrama fornece uma representação visual das ligações entre os principais componentes do ASRS. Ele facilita a montagem e a compreensão das conexões entre os microcontroladores, motores, sensores e módulos auxiliares. Ideal para consultas rápidas e montagem prática do circuito.
 
