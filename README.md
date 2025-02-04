@@ -88,12 +88,16 @@ Este diagrama fornece uma representação visual das ligações entre os princip
 
 O algoritmo Queue foi implementado para controlar a movimentação dos materiais dentro do sistema ASRS. A Queue segue a abordagem de FIFO (First In, First Out), onde o primeiro item a entrar será o primeiro a sair. Esse tipo de estrutura é ideal para o nosso sistema, pois garante que os materiais sejam armazenados e retirados de forma organizada, sem sobrecarregar nenhum compartimento.
 
+<div align="center">
 <img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Diagrams%20and%20Schematics/Algorithm_Queue.png" alt="script" width="700">
+</div>
 
 #### Fluxogramas
 O fluxograma abaixo ilustra o fluxo do programa no ESP32, com o algoritmo FIFO sendo utilizado para determinar a ordem de operação.
 
+<div align="center">
 <img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Diagrams%20and%20Schematics/Flowchart_ESP32.png" alt="script" width="700">
+</div>
 
 ### Interface de Controlo
 A interface de controlo foi desenvolvida utilizando o ESP32, permitindo que os operadores interajam com o sistema através de um browser. A interface permite:
