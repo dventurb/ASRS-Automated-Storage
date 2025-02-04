@@ -69,15 +69,15 @@ A estrutura do sistema foi construída principalmente em madeira, com suportes i
 ### Diagrama de Blocos
 O Diagrama de Blocos oferece uma representação visual do fluxo de dados e controle dentro do sistema ASRS (Automated Storage and Retrieval System), organizando os principais componentes e suas interações. Ele é dividido em várias seções essenciais para o funcionamento do sistema, como Entradas, Saídas, Atuadores, Fonte de Alimentação e Microcontroladores. Cada uma dessas seções desempenha um papel crucial no processamento e controle das operações.
 
-    Entradas: São os dados e sinais fornecidos ao sistema. No caso do ASRS, incluem a autenticação via RFID (para controle de acesso) e a interação com o usuário (por botões de controle ou outras interfaces).
+    - Entradas: São os dados e sinais fornecidos ao sistema. No caso do ASRS, incluem a autenticação via RFID (para controle de acesso) e a interação com o usuário (por botões de controle ou outras interfaces).
 
-    Saídas: Representam as respostas ou ações geradas pelo sistema com base nas entradas. As informações de posição, peso e identificação da tag RFID são alguns exemplos de saídas, que são registradas ou usadas para controle adicional.
+    - Saídas: Representam as respostas ou ações geradas pelo sistema com base nas entradas. As informações de posição, peso e identificação da tag RFID são alguns exemplos de saídas, que são registradas ou usadas para controle adicional.
 
-    Atuadores: São os dispositivos responsáveis pela execução das ações no sistema. Incluem os motores de passo que movimentam os eixos X, Y e Z, conforme os comandos recebidos do microcontrolador.
+    - Atuadores: São os dispositivos responsáveis pela execução das ações no sistema. Incluem os motores de passo que movimentam os eixos X, Y e Z, conforme os comandos recebidos do microcontrolador.
 
-    Fonte de Alimentação: Fornece a energia necessária para o funcionamento do sistema, garantindo que os componentes, como os microcontroladores, sensores e atuadores, recebam a voltagem necessária.
+    - Fonte de Alimentação: Fornece a energia necessária para o funcionamento do sistema, garantindo que os componentes, como os microcontroladores, sensores e atuadores, recebam a voltagem necessária.
 
-    Microcontroladores: O ESP32 e o Arduino Mega desempenham papéis chave no controle e processamento do sistema. O ESP32 gerencia a autenticação RFID e se comunica com o Arduino, que por sua vez controla os motores de passo e interpreta os comandos para movimentação do ASRS.
+    - Microcontroladores: O ESP32 e o Arduino Mega desempenham papéis chave no controle e processamento do sistema. O ESP32 gerencia a autenticação RFID e se comunica com o Arduino, que por sua vez controla os motores de passo e interpreta os comandos para movimentação do ASRS.
 
 <div align="center">
 <img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Electronics/Functional_Data_Block.png" alt="script" width="700">
