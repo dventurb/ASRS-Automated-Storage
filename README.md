@@ -57,12 +57,7 @@ A estrutura do sistema foi construída principalmente em madeira, com suportes i
 O circuito eletrónico foi desenvolvido utilizando um Arduino Mega para controlo dos motores de passo e um ESP32 para a interface web. A comunicação entre os dispositivos é feita através do protocolo UART.
 
 <div align="center">
-<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Electronics/Circuit_Connections.png" alt="script" width="200">
-</div>
-
-<div align="center">
-<img src="
-https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Electronics/Schematic_Colours.pdf" alt="script" width="200">
+<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Electronics/Circuit_Connections.png" alt="script" width="500">
 </div>
 
 ### Interface de Controlo
