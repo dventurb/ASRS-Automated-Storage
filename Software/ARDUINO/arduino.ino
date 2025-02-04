@@ -238,3 +238,8 @@ void verificarTemperatura(void){
      }
      delay(100);
 }
+
+void interrupEmergencia() {
+  btnEmergencia = true;
+}
+
