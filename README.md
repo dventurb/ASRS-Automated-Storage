@@ -57,17 +57,30 @@ A estrutura do sistema foi construída principalmente em madeira, com suportes i
 **1. O ESP32 recebe autenticação via RFID e habilita o controlo do sistema.**
 
 **2. O utilizador controla o sistema através dos Botões de Contato.**
+
 **3. O ESP32 processa o algoritmo de FIFO e envia, via serial, o compartimento a ser tratado para o Arduino Mega.**
+
 **4. O Arduino Mega interpreta os comandos e aciona os motores de passo para movimentação nos eixos X, Y e Z.**
+
 **5. Os sensores garantem precisão e segurança nos movimentos.**
+
 **6. O sistema registra a posição, o peso do material e a Tag RFID do utilizador.**
-   
-### Circuito Eletrónico
-O circuito eletrónico foi desenvolvido utilizando um Arduino Mega para controlo dos motores de passo e um ESP32 para a interface web. A comunicação entre os dispositivos é feita através do protocolo UART.
+
+### Diagrama de Blocos
 
 <div align="center">
-<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Electronics/Circuit_Connections.png" alt="script" width="1000">
+<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Electronics/Functional_Data_Block.png" alt="script" width="1000">
 </div>
+   
+### Circuito Eletrónico
+Este é o esquema elétrico detalhado do sistema ASRS, desenvolvido no KiCad. Ele apresenta todas as conexões elétricas, incluindo componentes como ESP32, Arduino Mega, drivers de motor, sensores, fonte de alimentação e demais módulos eletrônicos utilizados no projeto.
+
+[<img src="https://imgur.com/a/4SeKzXN" alt="Esquema" width="1000">](https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Electronics/Schematic_Colours.pdf)
+
+Este diagrama fornece uma representação visual das ligações entre os principais componentes do ASRS. Ele facilita a montagem e a compreensão das conexões entre os microcontroladores, motores, sensores e módulos auxiliares. Ideal para consultas rápidas e montagem prática do circuito.
+
+<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Electronics/Circuit_Connections.png" alt="script" width="1000">
+
 
 ### Interface de Controlo
 A interface de controlo foi desenvolvida utilizando o ESP32, permitindo que os operadores interajam com o sistema através de um browser. A interface permite:
