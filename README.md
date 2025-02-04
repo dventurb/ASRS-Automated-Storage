@@ -55,6 +55,7 @@ A estrutura do sistema foi construída principalmente em madeira, com suportes i
 
 ### Funcionamento
 **1. O ESP32 recebe autenticação via RFID e habilita o controlo do sistema.**
+
 **2. O utilizador controla o sistema através dos Botões de Contato.**
 **3. O ESP32 processa o algoritmo de FIFO e envia, via serial, o compartimento a ser tratado para o Arduino Mega.**
 **4. O Arduino Mega interpreta os comandos e aciona os motores de passo para movimentação nos eixos X, Y e Z.**
