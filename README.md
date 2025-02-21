@@ -1,57 +1,43 @@
 # Automated Storage and Retrieval System (ASRS)
 
-Este repositório cobre o desenvolvimento de um **Sistema de Armazenamento e Recuperação Automatizado (ASRS)** de baixo custo, utilizando componentes eletrónicos como Arduino, ESP32, motores de passo e módulos RFID. O objetivo do projeto é criar um sistema acessível e fácil de implementar, ideal para fins educativos ou para pequenas empresas que desejam automatizar o armazenamento de materiais.
-
-Aqui, encontrarás todos os ficheiros CAD para as peças impressas em 3D, diagramas elétricos, código-fonte para o Arduino e ESP32, e os resultados dos testes realizados. Se tiveres dúvidas ou comentários, não hesites em contactar-me!
-
-O sistema foi desenvolvido como parte do projeto final do Curso Técnico Superior Profissional de Sistemas Eletrónicos e Computadores, sob a orientação dos professores da **Escola Superior de Tecnologia e Gestão (ESTG)**.
+This repo covers the development of a low-cost **Automated Storage and Retrieval System (ASRS)**, using stepper motors, ESP32, Arduino Mega 2560 and some other electronic components. The system is controlled with a FIFO (First-In First-Out) Algorithm and RFID authetication. It also integrates a load cell to save the weight of the material, and storing it alongside the RFID Card.
 
 <div align="center">
     <img src="https://imgur.com/B0eKkpb.png" alt="script" width="300">
 </div>
 
 
-### Funcionalidades Principais:
-1. **Movimentação Automatizada**: Controlo preciso dos eixos X, Y e Z para armazenamento e recuperação de materiais.
-2. **Autenticação de Operadores**: Utilização de um módulo RFID para garantir que apenas operadores autorizados possam interagir com o sistema.
-3. **Verificação de Peso**: Integração de um módulo de peso para garantir que os materiais não excedam a capacidade máxima do sistema.
-4. **Interface de Controlo**: Interface web desenvolvida no ESP32 para controlo e monitorização do sistema em tempo real.
-
----
-
 ## Estrutura do Repositório
 
-- **/CAD**: Ficheiros STL e STEP para as peças impressas em 3D.
-- **/Electronics**: Diagramas elétricos e esquemas de ligação dos componentes.
-- **/Software**: Código-fonte para o Arduino e ESP32.
-- **/Pictures**: Figuras dos testes realizados e análise.
-- **/Documentação**: Relatórios e documentos relevantes.
+- **/CAD**: STL and STEP files.
+- **/Electronics**: Electrical schematic and diagrams.
+- **/Software**: Source code for Arduino and ESP32.
+- **/Pictures**: Images for analysis. 
+- **/Docs**: Relevant documents.
 
----
 
-## Componentes Utilizados
-
-| **Componente**            | **Quantidade** | **Descrição**                                                                      |
-|----------------------------|----------------|-----------------------------------------------------------------------------------|
-| Arduino Mega 2560          | 1              | Microcontrolador principal para controlo dos motores de passo.                    |
-| ESP32                      | 1              | Responsável pela interação do utilizador, web server e comunicação com o Arduino. |
-| Motores de Passo NEMA 17   | 3              | Utilizados para a movimentação dos eixos X, Y e Z.                                |
-| Módulo RFID RC522          | 1              | Para autenticação do utilizador.                                                  |
-| Módulo de Peso HX711       | 1              | Para medição do peso dos materiais.                                               |
-| Eixos Lineares             | 3              | Para movimentação suave e precisa nos eixos X e Z.                                |
-| Parafuso de Avanço         | 1              | Para movimentação vertical no eixo Y.                                             |
-| Fonte de Alimentação       | 1              | Para alimentação geral do sistema.                                                |
-
----
-
-## Montagem e Funcionamento
-
-### Estrutura Mecânica
-A estrutura do sistema foi construída principalmente em madeira, com suportes impressos em 3D para os motores e eixos. O eixo Y utiliza um parafuso de avanço para movimentação vertical, enquanto os eixos X e Z utilizam correias dentadas para movimentação horizontal.
+## Estrutura Mecânica
+The structure is primarily build from wood with some 3D-printed parts for the motors and axis. The Y-Axis use a lead screw for vertical movement, while the X-Axis and Z-Axis use timing belts for horizontal movement.
 
 <div align="center">
 <img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Mechanics/ASRS_MechanicalComponents.png" alt="script" width="300">
 </div>
+
+### **Mechanical Components**  
+
+| **Component**              | **Quantity** | **Description**                                              |  
+|----------------------------|-------------|--------------------------------------------------------------|  
+| Lead screw (8mm, 50cm)     | 1           | Used for vertical movement on the Y-axis.                   |  
+| Coupler                    | 1           | Connects the lead screw to the stepper motor.               |  
+| Linear shafts (10mm, 50cm) | 4           | Provides smooth linear motion for the system.               |  
+| Linear shafts (10mm, 20cm) | 2           | Supports movement in smaller sections of the system.        |  
+| Linear shaft supports      | 8           | Holds the linear shafts in place.                           |  
+| Linear bearing blocks      | 6           | Enables smooth sliding motion along the shafts.             |  
+| GT2 timing belts           | 2           | Used for horizontal movement on the X and Z axes.           |  
+| GT2 pulleys                | 2           | Compatible with the GT2 timing belts.                       |  
+| 3D-printed supports        | X           | Used for mounting motors and mechanical components.         |  
+
+---
 
 ### Funcionamento
 **1. O ESP32 recebe autenticação via RFID e habilita o controlo do sistema.**
