@@ -7,7 +7,7 @@ This repo covers the development of a low-cost **Automated Storage and Retrieval
 </div>
 
 
-## Estrutura do Repositório
+## Repository Structure
 
 - **/CAD**: STL and STEP files.
 - **/Electronics**: Electrical schematic and diagrams.
@@ -16,7 +16,7 @@ This repo covers the development of a low-cost **Automated Storage and Retrieval
 - **/Docs**: Relevant documents.
 
 
-## Estrutura Mecânica
+## Mechanical Structure
 The structure is primarily build from wood with some 3D-printed parts for the motors and axis. The Y-Axis use a lead screw for vertical movement, while the X-Axis and Z-Axis use timing belts for horizontal movement.
 
 <div align="center">
@@ -34,88 +34,118 @@ The structure is primarily build from wood with some 3D-printed parts for the mo
 | Linear shaft supports      | 8           | Holds the linear shafts in place.                           |  
 | Linear bearing blocks      | 6           | Enables smooth sliding motion along the shafts.             |  
 | GT2 timing belts           | 2           | Used for horizontal movement on the X and Z axes.           |  
-| GT2 pulleys                | 2           | Compatible with the GT2 timing belts.                       |  
-| 3D-printed supports        | X           | Used for mounting motors and mechanical components.         |  
+| GT2 pulleys with bearing   | 2           | Compatible with the GT2 timing belts, includes a bearing.   |  
+| 3D-printed supports        | x           | Used for mounting motors and mechanical components.         |  
 
 ---
 
-### Funcionamento
-**1. O ESP32 recebe autenticação via RFID e habilita o controlo do sistema.**
+### Operation
 
-**2. O utilizador controla o sistema através dos Botões de Contato.**
+1. The ESP32 receives authentication via RFID and enables system control.
 
-**3. O ESP32 processa o algoritmo de FIFO e envia, via serial, o compartimento a ser tratado para o Arduino Mega.**
+2. The user controls the system through Contact Buttons.
 
-**4. O Arduino Mega interpreta os comandos e aciona os motores de passo para movimentação nos eixos X, Y e Z.**
+3. The ESP32 processes the FIFO algorithm and sends, via serial communication, the compartment to be handled by the Arduino Mega.
 
-**5. Os sensores garantem precisão e segurança nos movimentos.**
+4. The Arduino Mega interprets the commands and activates the stepper motors to move along the X, Y, and Z axes.
 
-**6. O sistema registra a posição, o peso do material e a Tag RFID do utilizador.**
+5. Sensors ensure precision and safety in movements.
 
-### Diagrama de Blocos
-O Diagrama de Blocos oferece uma representação visual do fluxo de dados e controle dentro do sistema ASRS (Automated Storage and Retrieval System), organizando os principais componentes e suas interações. Ele é dividido em várias seções essenciais para o funcionamento do sistema, como Entradas, Saídas, Atuadores, Fonte de Alimentação e Microcontroladores.
+6. The system records the position, material weight, and the user's RFID tag.
+
+### Block Diagram
+The Block Diagram provides a visual representation of the data and control flow within the ASRS (Automated Storage and Retrieval System), organizing the main components and their interactions. It is divided into several essential sections for system operation, such as Inputs, Outputs, Actuators, Power Supply, and Microcontrollers.
 
 <div align="center">
 <img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Electronics/Functional_Data_Block.png" alt="script" width="700">
 </div>
    
-### Circuito Eletrónico
-Este é o esquema elétrico detalhado do sistema ASRS, desenvolvido no KiCad. Ele apresenta todas as conexões elétricas, incluindo componentes como ESP32, Arduino Mega, drivers de motor, sensores, fonte de alimentação e demais módulos eletrônicos utilizados no projeto.
+### Electronic Circuit
+This is the detailed electrical schematic of the ASRS system, developed in KiCad. It presents all electrical connections, including components such as ESP32, Arduino Mega, motor drivers, sensors, power supply, and other electronic modules used in the project.
 
 [<img src="https://i.imgur.com/bHJxbk0.png" alt="Esquema" width="800">](https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Electronics/Schematic_Colours.pdf)
     
-Este diagrama fornece uma representação visual das ligações entre os principais componentes do ASRS. Ele facilita a montagem e a compreensão das conexões entre os microcontroladores, motores, sensores e módulos auxiliares. Ideal para consultas rápidas e montagem prática do circuito.
+This diagram provides a visual representation of the connections between the main ASRS components. It facilitates assembly and understanding of the connections between microcontrollers, motors, sensors, and auxiliary modules, making it ideal for quick reference and practical circuit assembly.
 
 <img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Electronics/Circuit_Connections.png" alt="script" width="1000">
 
-### Programação e Fluxogramas
+### Electronic Components
 
-#### Algoritmo Queue (Fila)
+That table provides a summary of the electronic components used in the development of the project. It lists input and output devices, microcontrollers, and auxiliary components.
 
-O algoritmo Queue foi implementado para controlar a movimentação dos materiais dentro do sistema ASRS. A Queue segue a abordagem de FIFO (First In, First Out), onde o primeiro item a entrar será o primeiro a sair. Esse tipo de estrutura é ideal para o nosso sistema, pois garante que os materiais sejam armazenados e retirados de forma organizada, sem sobrecarregar nenhum compartimento.
+| Component                                   | Quantity |
+|---------------------------------------------|----------|
+| ESP32                                       | 1        |
+| Arduino Mega 2560                           | 1        |
+| CNC Shield V3                               | 1        |
+| A4988 Driver                                | 3        |
+| RFID RC522                                  | 1        |
+| LCD 16x2 with I²C Module                    | 1        |
+| 4x3 Keypad                                  | 1        |
+| Weight Module with HX711                    | 1        |
+| 10k Linear Potentiometer                    | 3        |
+| Limit Sensors                               | 3        |
+| 19mm Metal Contact Button with LED          | 2        |
+| 22mm Metal Contact Button with LED          | 1        |
+| NC Emergency Button                         | 1        |
+| 24V Relay                                   | 1        |
+| 5V Voltage Regulator LM805                  | 1        |
+| 12V Voltage Regulator LM812                 | 1        |
+| 12V 0.14A Fan                               | 1        |
+| Buzzer                                      | 1        |
+| 1µF Capacitor                               | 2        |
+| 100µF Capacitor                             | 2        |
+| LM358                                       | 1        |
+| 1N4001 Diode                                | 2        |
+| 10kΩ Resistor                               | 2        |
+| 55Ω Resistor                                | 1        |
+| 470Ω Resistor                               | 1        |
+
+### Programming and Flowcharts
+
+#### Queue Algorithm (FIFO)
+
+The Queue algorithm was implemented to control the movement of materials within the ASRS system. The Queue follows the FIFO (First In, First Out) approach, where the first item to enter will be the first to exit. This type of structure is ideal for our system as it ensures that materials are stored and retrieved in an organized manner, preventing any compartment from being overloaded.
 
 <div align="center">
 <img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Diagrams%20and%20Schematics/Algorithm_Queue.png" alt="script" width="700">
 </div>
 
-#### Fluxogramas
-O fluxograma abaixo ilustra o fluxo do programa no ESP32, com o algoritmo FIFO sendo utilizado para determinar a ordem de operação.
+### Enqueue Algortithm
+
+The Enqueue operation is responsible for adding a new material to the system, registering its weight, and assigning it to an available compartment. The process follows these steps:
+
+    Check Availability – The system verifies if there is space in the queue.
+    Read the Material's Weight – A weight sensor captures the material’s weight.
+    Store in Queue – The material is assigned to the next available compartment.
+    Update the Tail Pointer – The queue pointer is updated for the next insertion.
+    Save to EEPROM – Data is stored for persistence.
+    
+<div align="center">
+<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Diagrams%20and%20Schematics/Enqueue.png" alt="script" width="700">
+</div>
+
+### Dequeue Algorithm
+
+The Dequeue operation handles the retrieval of a material from storage. It follows these steps:
+
+    Check if the Queue is Not Empty – Ensures that there are materials to be retrieved.
+    Retrieve the Material – The system selects the first stored material.
+    Move the Storage Mechanism – The ASRS moves to the corresponding compartment.
+    Update the Head Pointer – The queue pointer is updated to reflect the removal.
+    Save to EEPROM – The updated queue state is stored for future reference.
+    
+<div align="center">
+<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Diagrams%20and%20Schematics/Dequeue.png" alt="script" width="700">
+</div>
+
+#### Flowcharts
+
+The flowchart below illustrates the program flow on the ESP32, with the FIFO algorithm being used to determine the order of operation.
 
 <div align="center">
 <img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Diagrams%20and%20Schematics/Flowchart_ESP32.png" alt="script" width="500">
 </div>
 
-### Interface de Controlo
-A interface de controlo foi desenvolvida utilizando o ESP32, permitindo que os operadores interajam com o sistema através de um browser. A interface permite:
-- Autenticação via RFID.
-- Controlo dos movimentos dos eixos.
-- Verificação do peso dos materiais.
-- Registo de operações em tempo real.
-
 ---
-
-## Testes e Resultados
-
-Foram realizados vários testes para validar o funcionamento do sistema, incluindo:
-1. **Testes de Movimentação**: Verificação da precisão dos movimentos nos eixos X, Y e Z.
-2. **Testes de Autenticação**: Validação do módulo RFID para autenticação de operadores.
-3. **Testes de Peso**: Verificação da precisão do módulo de peso.
-
-### Resultados dos Testes
-| **Teste**                  | **Resultado**                                                                 |
-|----------------------------|-------------------------------------------------------------------------------|
-| Movimentação dos Eixos     | Precisão de ±1 mm nos eixos X e Z, e ±0.5 mm no eixo Y.                      |
-| Autenticação RFID          | 100% de precisão na leitura dos cartões RFID.                                |
-| Verificação de Peso        | Precisão de ±10 g no módulo de peso.                                         |
-
----
-
-## Conclusão
-
-O projeto demonstrou que é possível desenvolver um sistema ASRS de baixo custo e fácil implementação, utilizando componentes acessíveis como Arduino e ESP32. O sistema foi capaz de realizar movimentações precisas e integrar funcionalidades como autenticação RFID e verificação de peso.
-
-Para futuras melhorias, sugere-se:
-- Aumentar a capacidade de carga do sistema.
-- Implementar um sistema de feedback para correção de erros de posicionamento.
-- Desenvolver uma interface gráfica mais intuitiva.
 
