@@ -144,8 +144,14 @@ The Dequeue operation handles the retrieval of a material from storage. It follo
 The flowchart below illustrates the program flow on the ESP32, with the FIFO algorithm being used to determine the order of operation.
 
 <div align="center">
-<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Diagrams%20and%20Schematics/Flowchart_ESP32.png" alt="script" width="500">
+<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Diagrams%20and%20Schematics/Flowchart_ESP32.png" alt="script" width="400">
 </div>
+
+<div align="center">
+<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Diagrams%20and%20Schematics/Flowchart_Enqueue.png" alt="script" width="250">
+
+<div align="center">
+<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Diagrams%20and%20Schematics/Flowchart_Dequeue.png" alt="script" width="250">
 
 ---
 
