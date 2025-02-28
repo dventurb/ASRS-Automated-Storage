@@ -20,7 +20,7 @@ This repo covers the development of a low-cost **Automated Storage and Retrieval
 The structure is primarily build from wood with some 3D-printed parts for the motors and axis. The Y-Axis use a lead screw for vertical movement, while the X-Axis and Z-Axis use timing belts for horizontal movement.
 
 <div align="center">
-<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Mechanics/ASRS_MechanicalComponents.png" alt="script" width="300">
+<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Mechanics/ASRS_MechanicalComponents.png" alt="script" width="250">
 </div>
 
 ### **Mechanical Components**  
@@ -122,7 +122,7 @@ The Enqueue operation is responsible for adding a new material to the system, re
     Save to EEPROM – Data is stored for persistence.
     
 <div align="center">
-<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Diagrams%20and%20Schematics/Enqueue.png" alt="script" width="700">
+<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Diagrams%20and%20Schematics/Enqueue.png" alt="script" width="500">
 </div>
 
 ### Dequeue Algorithm
@@ -136,7 +136,7 @@ The Dequeue operation handles the retrieval of a material from storage. It follo
     Save to EEPROM – The updated queue state is stored for future reference.
     
 <div align="center">
-<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Diagrams%20and%20Schematics/Dequeue.png" alt="script" width="700">
+<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Diagrams%20and%20Schematics/Dequeue.png" alt="script" width="500">
 </div>
 
 #### Flowcharts
@@ -144,7 +144,7 @@ The Dequeue operation handles the retrieval of a material from storage. It follo
 The flowchart below illustrates the program flow on the ESP32, with the FIFO algorithm being used to determine the order of operation.
 
 <div align="center">
-<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Diagrams%20and%20Schematics/Flowchart_ESP32.png" alt="script" width="400">
+<img src="https://github.com/dventurb/ASRS-Automated-Storage/blob/main/Pictures/Diagrams%20and%20Schematics/Flowchart_ESP32.png" alt="script" width="300">
 </div>
 
 <div align="center">
