@@ -33,9 +33,10 @@ The structure is primarily build from wood with some 3D-printed parts for the mo
 | Linear shafts (10mm, 20cm) | 2           | Supports movement in smaller sections of the system.        |  
 | Linear shaft supports      | 8           | Holds the linear shafts in place.                           |  
 | Linear bearing blocks      | 6           | Enables smooth sliding motion along the shafts.             |  
-| GT2 timing belts           | 2           | Used for horizontal movement on the X and Z axes.           |  
+| GT2 timing belts           | 10m         | Used for horizontal movement on the X and Z axes.           |  
 | GT2 pulleys with bearing   | 2           | Compatible with the GT2 timing belts, includes a bearing.   |  
-| 3D-printed supports        | x           | Used for mounting motors and mechanical components.         |  
+| GT2 belt clamp             | 2           | Used to secure the GT2 belt on base.                        |
+| 3D-printed supports        | x           | Used for mounting motors and mechanical components.         |
 
 ---
 
